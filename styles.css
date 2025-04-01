@@ -1,0 +1,138 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body & Overall Theme */
+  body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  header p {
+    color: #cccccc;
+  }
+  
+  /* Upload Container */
+  .upload-container {
+    margin: 2rem 0;
+  }
+  
+  .drop-area {
+    border: 2px dashed #888;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    transition: border-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .drop-area.dragover {
+    border-color: #24c0ff;
+  }
+  
+  .upload-button {
+    display: inline-block;
+    background-color: #24c0ff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: #ff4e4e;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Visualization Canvas */
+  .visualizer-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 1rem auto;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  #visualizer {
+    width: 100%;
+    display: block;
+    background-color: #1e1e1e;
+  }
+  
+  /* Controls */
+  .controls-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #play-button, #pause-button {
+    background-color: #24c0ff;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #play-button:disabled, #pause-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  input[type="range"] {
+    cursor: pointer;
+  }
+  
+  .style-selector {
+    margin-bottom: 2rem;
+  }
+  
+  .style-selector select {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .controls-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .visualizer-container {
+      width: 100%;
+    }
+  }
+  
